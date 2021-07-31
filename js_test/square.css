@@ -6,7 +6,7 @@ body {
   overflow: hidden;
   background-color: white;
 }
-
+/* to get the currently active screen size giving main container the full height and width of the device */
 .main_container {
   height: 100vh;
   width: 100vw;

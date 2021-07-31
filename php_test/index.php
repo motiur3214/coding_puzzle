@@ -1,17 +1,18 @@
 
 <?php   
-
+// i need to extend from arrayobject as i need to use object of type arrInheritance as array 
+// with out the inheritence of the arrayObject i wont be able to set keys and values to an array;
 class arrInheritance extends ArrayObject {
 
-    private $data = array();
+    
 //   setting keys and values to an array from object 
     public function __set($index, $val) {
-        $this->data[$index] = $val;
+        $this[$index] = $val;
     }
 
     public function displayAsTable() {
-        
-        $arr=$this->data;
+        // TYPE CASTING from object to array
+        $arr=(array) $this;
         $out =  '<table border=2>';
         $out .= '<thead>
         <tr>
